@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Booking</title>
+</head>
+
+<body>
+    <center>
+        <h1 class="watermark">Đăng ký du lịch</h1>
+
+        <form name="frmGhiDanh" id="frmGhiDanh" method="post" autocomplete="off">
+            <fieldset id="thongtinDonGian">
+                <table border="1" class="tblThongTinCaNhan">
+                    <tr>
+                        <td class="tieude" width="150px">Họ và tên</td>
+                        <td>
+                            <input type="text" name="txtHoTen" id="txtHoTen" style="width: 400px;" onkeypress="return /[a-z]/i.test(event.key)" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tieude">Địa chỉ</td>
+                        <td>
+                            <input type="text" name="txtDiaChi" id="txtDiaChi" style="width: 300px;" onkeyup="this.value=this.value.replace(/[^a-zA-Z0-9]/g, '')" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tieude">Điện thoại</td>
+                        <td>
+                            <input type="text" maxlength="10" name="txtSDT" id="txtSDT" onkeypress="return /[0-9]/i.test(event.key)" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tieude">Khách Việt Nam</td>
+                        <td>
+                            <input type="checkbox" name="khachVN" id="">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tieude">Chọn tour</td>
+                        <td>
+                            <select name="tour" id="tour" required>
+                                <option value="Buôn mê thuội - Gia Lai - Kontum">Buôn mê thuội - Gia Lai - Kontum
+                                </option>
+                                <option value="Buôn mê thuội - Gia Lai - Kontum">Buôn mê thuội - Gia Lai - Kontum
+                                </option>
+                                <option value="Buôn mê thuội - Gia Lai - Kontum">Buôn mê thuội - Gia Lai - Kontum
+                                </option>
+                                <option value="Buôn mê thuội - Gia Lai - Kontum">Buôn mê thuội - Gia Lai - Kontum
+                                </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tieude">Phương tiện</td>
+                        <td>
+                            <label><input type="radio" name="rdPhuongTien" id="rdPhuongTien_1" value="0" required/> Máy bay
+                            </label>
+                            <label><input type="radio" name="rdPhuongTien" id="rdPhuongTien_2" value="1" required/> Xe ô tô
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="padding-left: 15%;">
+                            <fieldset style="width: 80%; border-color: red; color: rgb(22, 116, 240); text-align: center;">
+                                <legend style="text-align: left; color: rgb(22, 116, 240);">Số lượng đoàn khách</legend>
+                                <label for="fname">Người lớn:</label>
+                                <input type="text" id="nguoiLon" name="nguoiLon" style="width: 60px;" onkeypress="return /[0-9]/i.test(event.key)" required>
+                                <label for="lname">Trẻ em:</label>
+                                <input type="text" id="treEm" name="treEm" style="width: 60px;" onkeypress="return /[0-9]/i.test(event.key)" required>
+                            </fieldset>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tieude">Ghi chú thêm</td>
+                        <td>
+                            <textarea rows="4" cols="50" name="comment" form="usrform"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="2">
+                            <center>
+                                <button type="button" name="btnGoiDuLieu" id="btnGoiDuLieu"> Đồng ý </button>
+                                <button type="reset" name="btnXoaTrangDuLieu" id="btnXoaTrangDuLieu"> Reset </button> 
+                            </center>
+                        </th>
+                    </tr>
+                    <tr class="thong-bao">
+                        <th colspan="2">
+                            <center>
+                                <p class="txt-thong-bao" style="color: red; margin: 0;"></p>
+                            </center>
+                        </th>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </center>
+</body>
+    <script src="js/script.js"></script>
+</html>
